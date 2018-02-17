@@ -1,0 +1,538 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f820900e064, pid=3892, tid=0x00007f821eefa700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_152-b16) (build 1.8.0_152-b16)
+# Java VM: OpenJDK 64-Bit Server VM (25.152-b16 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# J 500 C1 java.util.Hashtable$Enumerator.hasMoreElements()Z (53 bytes) @ 0x00007f820900e064 [0x00007f820900e000+0x64]
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://www.azulsystems.com/support/
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f821800c800):  JavaThread "main" [_thread_in_Java, id=3897, stack(0x00007f821edfa000,0x00007f821eefb000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x000000000000005c
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00007f8203a12ff8, RCX=0x00000000d7507660, RDX=0x0000000000000000
+RSP=0x00007f821eef9620, RBP=0x00007f821eef96b0, RSI=0x0000000000000040, RDI=0x0000000000000040
+R8 =0x00000000d8ab2e70, R9 =0x0000000000000000, R10=0x00007f821e2b2c60, R11=0x00007f820900e020
+R12=0x0000000000000000, R13=0x00007f821eef9668, R14=0x0000000000000000, R15=0x00007f821800c800
+RIP=0x00007f820900e064, EFLAGS=0x0000000000010202, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f821eef9620)
+0x00007f821eef9620:   00007f8203a13108 0000000000000000
+0x00007f821eef9630:   00007f821eef9668 00007f821eef96b0
+0x00007f821eef9640:   00000000d7507920 00000000d8ab2e30
+0x00007f821eef9650:   00007f821eef96b0 00007f8208dec7d0
+0x00007f821eef9660:   00007f8208dec7d0 00000000d7507660
+0x00007f821eef9670:   00007f821eef9670 00007f8203a13191
+0x00007f821eef9680:   00007f821eef96c0 00007f8203a13540
+0x00007f821eef9690:   0000000000000000 00007f8203a131a0
+0x00007f821eef96a0:   00007f821eef9668 00007f821eef96c0
+0x00007f821eef96b0:   00007f821eef9718 00007f8208dec815
+0x00007f821eef96c0:   00000000d7507660 0000000000000001
+0x00007f821eef96d0:   00000000d75075c8 00007f821eef96c8
+0x00007f821eef96e0:   00007f8203918835 00007f821eef9740
+0x00007f821eef96f0:   00007f82039d0f70 0000000000000000
+0x00007f821eef9700:   00007f8203918868 00007f821eef96c0
+0x00007f821eef9710:   00007f821eef9738 00007f821eef9788
+0x00007f821eef9720:   00007f8208decffd 00000000d7469598
+0x00007f821eef9730:   00000000d7507660 00000000d7469138
+0x00007f821eef9740:   00000000d75075c8 00007f821eef9748
+0x00007f821eef9750:   00007f8203ce3c44 00007f821eef9798
+0x00007f821eef9760:   00007f8203ce7cb8 0000000000000000
+0x00007f821eef9770:   00007f8203ce3c68 00007f821eef9738
+0x00007f821eef9780:   00007f821eef9798 00007f821eef97e0
+0x00007f821eef9790:   00007f8208decffd 00000000d6b80038
+0x00007f821eef97a0:   00007f821eef97a0 00007f8203ce3934
+0x00007f821eef97b0:   00007f821eef97f8 00007f8203ce7cb8
+0x00007f821eef97c0:   0000000000000000 00007f8203ce3968
+0x00007f821eef97d0:   00007f821eef9798 00007f821eef97f0
+0x00007f821eef97e0:   00007f821eef9840 00007f8208decffd
+0x00007f821eef97f0:   00000000d6cee1e8 00000000d6b80038
+0x00007f821eef9800:   00007f821eef9800 00007f8203ce3863
+0x00007f821eef9810:   00007f821eef9850 00007f8203ce7cb8 
+
+Instructions: (pc=0x00007f820900e064)
+0x00007f820900e044:   00 48 b8 f8 2f a1 03 82 7f 00 00 81 e7 f8 0e 00
+0x00007f820900e054:   00 83 ff 00 0f 84 62 01 00 00 8b 46 20 8b 76 0c
+0x00007f820900e064:   8b 5e 1c e9 97 00 00 00 0f 1f 40 00 83 ff 00 48
+0x00007f820900e074:   ba 90 85 ea 03 82 7e 00 00 48 b9 28 01 00 00 00 
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX={method} {0x00007f8203a12ff8} 'hasMoreElements' '()Z' in 'java/util/Hashtable$Enumerator'
+RCX=0x00000000d7507660 is an oop
+java.util.Hashtable$Enumerator 
+ - klass: 'java/util/Hashtable$Enumerator'
+RDX=0x0000000000000000 is an unknown value
+RSP=0x00007f821eef9620 is pointing into the stack for thread: 0x00007f821800c800
+RBP=0x00007f821eef96b0 is pointing into the stack for thread: 0x00007f821800c800
+RSI=0x0000000000000040 is an unknown value
+RDI=0x0000000000000040 is an unknown value
+R8 =0x00000000d8ab2e70 is an oop
+java.lang.String 
+ - klass: 'java/lang/String'
+R9 =0x0000000000000000 is an unknown value
+R10=0x00007f821e2b2c60: <offset 0xf2bc60> in /home/tarang/.sdkman/candidates/java/8u152-zulu/jre/lib/amd64/server/libjvm.so at 0x00007f821d387000
+R11=0x00007f820900e020 is at entry_point+32 in (nmethod*)0x00007f820900de90
+R12=0x0000000000000000 is an unknown value
+R13=0x00007f821eef9668 is pointing into the stack for thread: 0x00007f821800c800
+R14=0x0000000000000000 is an unknown value
+R15=0x00007f821800c800 is a thread
+
+
+Stack: [0x00007f821edfa000,0x00007f821eefb000],  sp=0x00007f821eef9620,  free space=1021k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+J 500 C1 java.util.Hashtable$Enumerator.hasMoreElements()Z (53 bytes) @ 0x00007f820900e064 [0x00007f820900e000+0x64]
+j  java.util.Hashtable$Enumerator.hasNext()Z+1
+j  java.util.Hashtable.putAll(Ljava/util/Map;)V+13
+j  org.hibernate.cfg.Configuration.reset()V+124
+j  org.hibernate.cfg.Configuration.<init>(Lorg/hibernate/boot/registry/BootstrapServiceRegistry;)V+44
+j  org.hibernate.cfg.Configuration.<init>()V+11
+j  com.pharma.erp.Database.SessionFactory_Helper.getSessionFactory(Ljava/lang/Class;Ljava/lang/String;)Lorg/hibernate/SessionFactory;+30
+j  MainApp.MainApp.main([Ljava/lang/String;)V+11
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x65cf4b]  JavaCalls::call_helper(JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0x108b
+V  [libjvm.so+0x67db88]  jni_invoke_static(JNIEnv_*, JavaValue*, _jobject*, JNICallType, _jmethodID*, JNI_ArgumentPusher*, Thread*)+0x338
+V  [libjvm.so+0x67f63f]  jni_CallStaticVoidMethod+0x17f
+C  [libjli.so+0x7b74]  JavaMain+0x604
+C  [libpthread.so.0+0x77fc]  start_thread+0xdc
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f82180bc000 JavaThread "Service Thread" daemon [_thread_blocked, id=3910, stack(0x00007f82023b5000,0x00007f82024b6000)]
+  0x00007f82180b9800 JavaThread "C1 CompilerThread1" daemon [_thread_blocked, id=3909, stack(0x00007f82024b6000,0x00007f82025b7000)]
+  0x00007f82180b6800 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=3908, stack(0x00007f82025b7000,0x00007f82026b8000)]
+  0x00007f82180b5000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=3907, stack(0x00007f82026b8000,0x00007f82027b9000)]
+  0x00007f8218082800 JavaThread "Finalizer" daemon [_thread_blocked, id=3906, stack(0x00007f8202a95000,0x00007f8202b96000)]
+  0x00007f821807e000 JavaThread "Reference Handler" daemon [_thread_blocked, id=3905, stack(0x00007f8202b96000,0x00007f8202c97000)]
+=>0x00007f821800c800 JavaThread "main" [_thread_in_Java, id=3897, stack(0x00007f821edfa000,0x00007f821eefb000)]
+
+Other Threads:
+  0x00007f8218076000 VMThread [stack: 0x00007f8202c97000,0x00007f8202d98000] [id=3904]
+  0x00007f82180be800 WatcherThread [stack: 0x00007f82022b4000,0x00007f82023b5000] [id=3911]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 36864K, used 10794K [0x00000000d6b80000, 0x00000000d9480000, 0x0000000100000000)
+  eden space 31744K, 30% used [0x00000000d6b80000,0x00000000d7519c78,0x00000000d8a80000)
+  from space 5120K, 18% used [0x00000000d8a80000,0x00000000d8b70d70,0x00000000d8f80000)
+  to   space 5120K, 0% used [0x00000000d8f80000,0x00000000d8f80000,0x00000000d9480000)
+ ParOldGen       total 84992K, used 0K [0x0000000084200000, 0x0000000089500000, 0x00000000d6b80000)
+  object space 84992K, 0% used [0x0000000084200000,0x0000000084200000,0x0000000089500000)
+ Metaspace       used 6802K, capacity 7000K, committed 7040K, reserved 1056768K
+  class space    used 815K, capacity 888K, committed 896K, reserved 1048576K
+
+Card table byte_map: [0x00007f8208645000,0x00007f8208a25000] byte_map_base: 0x00007f8208224000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f821e2b0980
+ Begin Bits: [0x00007f82044bf000, 0x00007f82063b7000)
+ End Bits:   [0x00007f82063b7000, 0x00007f82082af000)
+
+Polling page: 0x00007f821ef1c000
+
+CodeCache: size=245760Kb used=2209Kb max_used=2209Kb free=243550Kb
+ bounds [0x00007f8208de5000, 0x00007f8209055000, 0x00007f8217de5000]
+ total_blobs=777 nmethods=499 adapters=194
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 1.515 Thread 0x00007f82180b9800 nmethod 495 0x00007f8209007e50 code [0x00007f8209007fc0, 0x00007f82090081b0]
+Event: 1.516 Thread 0x00007f82180b9800  496       1       java.util.Hashtable$Entry::getValue (5 bytes)
+Event: 1.516 Thread 0x00007f82180b9800 nmethod 496 0x00007f820900d690 code [0x00007f820900d7e0, 0x00007f820900d8f0]
+Event: 1.518 Thread 0x00007f82180b9800  497       3       java.lang.StringBuffer::<init> (6 bytes)
+Event: 1.518 Thread 0x00007f82180b9800 nmethod 497 0x00007f820900d950 code [0x00007f820900dac0, 0x00007f820900dd70]
+Event: 1.530 Thread 0x00007f82180b6800  498  s!   4       sun.misc.URLClassPath::getLoader (243 bytes)
+Event: 1.550 Thread 0x00007f82180b9800  500       3       java.util.Hashtable$Enumerator::hasMoreElements (53 bytes)
+Event: 1.550 Thread 0x00007f82180b9800 nmethod 500 0x00007f820900de90 code [0x00007f820900e000, 0x00007f820900e2d0]
+Event: 1.550 Thread 0x00007f82180b9800  501       3       java.util.Hashtable$Enumerator::nextElement (111 bytes)
+Event: 1.551 Thread 0x00007f82180b9800 nmethod 501 0x00007f820900e410 code [0x00007f820900e5a0, 0x00007f820900e9c8]
+
+GC Heap History (2 events):
+Event: 0.622 GC heap before
+{Heap before GC invocations=1 (full 0):
+ PSYoungGen      total 36864K, used 31744K [0x00000000d6b80000, 0x00000000d9480000, 0x0000000100000000)
+  eden space 31744K, 100% used [0x00000000d6b80000,0x00000000d8a80000,0x00000000d8a80000)
+  from space 5120K, 0% used [0x00000000d8f80000,0x00000000d8f80000,0x00000000d9480000)
+  to   space 5120K, 0% used [0x00000000d8a80000,0x00000000d8a80000,0x00000000d8f80000)
+ ParOldGen       total 84992K, used 0K [0x0000000084200000, 0x0000000089500000, 0x00000000d6b80000)
+  object space 84992K, 0% used [0x0000000084200000,0x0000000084200000,0x0000000089500000)
+ Metaspace       used 3790K, capacity 4976K, committed 5120K, reserved 1056768K
+  class space    used 389K, capacity 424K, committed 512K, reserved 1048576K
+Event: 0.626 GC heap after
+Heap after GC invocations=1 (full 0):
+ PSYoungGen      total 36864K, used 963K [0x00000000d6b80000, 0x00000000d9480000, 0x0000000100000000)
+  eden space 31744K, 0% used [0x00000000d6b80000,0x00000000d6b80000,0x00000000d8a80000)
+  from space 5120K, 18% used [0x00000000d8a80000,0x00000000d8b70d70,0x00000000d8f80000)
+  to   space 5120K, 0% used [0x00000000d8f80000,0x00000000d8f80000,0x00000000d9480000)
+ ParOldGen       total 84992K, used 0K [0x0000000084200000, 0x0000000089500000, 0x00000000d6b80000)
+  object space 84992K, 0% used [0x0000000084200000,0x0000000084200000,0x0000000089500000)
+ Metaspace       used 3790K, capacity 4976K, committed 5120K, reserved 1056768K
+  class space    used 389K, capacity 424K, committed 512K, reserved 1048576K
+}
+
+Deoptimization events (5 events):
+Event: 1.000 Thread 0x00007f821800c800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f8208f6a5cc method=java.lang.String.replace(CC)Ljava/lang/String; @ 26
+Event: 1.435 Thread 0x00007f821800c800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f8208fc5db4 method=java.util.regex.Pattern$BmpCharProperty.match(Ljava/util/regex/Matcher;ILjava/lang/CharSequence;)Z @ 31
+Event: 1.435 Thread 0x00007f821800c800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f8208fc5db4 method=java.util.regex.Pattern$BmpCharProperty.match(Ljava/util/regex/Matcher;ILjava/lang/CharSequence;)Z @ 31
+Event: 1.435 Thread 0x00007f821800c800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f8208fc5db4 method=java.util.regex.Pattern$BmpCharProperty.match(Ljava/util/regex/Matcher;ILjava/lang/CharSequence;)Z @ 31
+Event: 1.435 Thread 0x00007f821800c800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f8208fc5db4 method=java.util.regex.Pattern$BmpCharProperty.match(Ljava/util/regex/Matcher;ILjava/lang/CharSequence;)Z @ 31
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 0.215 Thread 0x00007f821800c800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d6bf5e18) thrown at [/export/home/tester/jenkins/workspace/zulu8-silver-build-rhel64/zulu-src/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 0.545 Thread 0x00007f821800c800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d8a34ea8) thrown at [/export/home/tester/jenkins/workspace/zulu8-silver-build-rhel64/zulu-src/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 0.545 Thread 0x00007f821800c800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d8a352a0) thrown at [/export/home/tester/jenkins/workspace/zulu8-silver-build-rhel64/zulu-src/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 0.545 Thread 0x00007f821800c800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d8a37958) thrown at [/export/home/tester/jenkins/workspace/zulu8-silver-build-rhel64/zulu-src/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 0.545 Thread 0x00007f821800c800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d8a37d50) thrown at [/export/home/tester/jenkins/workspace/zulu8-silver-build-rhel64/zulu-src/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 0.545 Thread 0x00007f821800c800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d8a38b30) thrown at [/export/home/tester/jenkins/workspace/zulu8-silver-build-rhel64/zulu-src/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 0.545 Thread 0x00007f821800c800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d8a38f28) thrown at [/export/home/tester/jenkins/workspace/zulu8-silver-build-rhel64/zulu-src/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 0.862 Thread 0x00007f821800c800 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x00000000d6dcae28) thrown at [/export/home/tester/jenkins/workspace/zulu8-silver-build-rhel64/zulu-src/hotspot/src/share/vm/prims/methodHandles.cpp, line 1167]
+Event: 0.883 Thread 0x00007f821800c800 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x00000000d6dd81a8) thrown at [/export/home/tester/jenkins/workspace/zulu8-silver-build-rhel64/zulu-src/hotspot/src/share/vm/prims/methodHandles.cpp, line 1167]
+Event: 1.551 Thread 0x00007f821800c800 Implicit null exception at 0x00007f820900e064 to 0x0000000000000000
+
+Events (10 events):
+Event: 1.543 loading class org/hibernate/tuple/entity/EntityTuplizer
+Event: 1.543 loading class org/hibernate/tuple/entity/EntityTuplizer done
+Event: 1.543 loading class org/hibernate/tuple/Tuplizer
+Event: 1.543 loading class org/hibernate/tuple/Tuplizer done
+Event: 1.545 loading class org/hibernate/tuple/entity/DynamicMapEntityTuplizer
+Event: 1.545 loading class org/hibernate/tuple/entity/DynamicMapEntityTuplizer done
+Event: 1.546 loading class org/hibernate/EmptyInterceptor
+Event: 1.546 loading class org/hibernate/EmptyInterceptor done
+Event: 1.546 loading class org/hibernate/Interceptor
+Event: 1.546 loading class org/hibernate/Interceptor done
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:0a 399408                             /home/tarang/.sdkman/candidates/java/8u152-zulu/bin/java
+00600000-00601000 rw-p 00000000 08:0a 399408                             /home/tarang/.sdkman/candidates/java/8u152-zulu/bin/java
+00e8f000-00eb0000 rw-p 00000000 00:00 0                                  [heap]
+84200000-89500000 rw-p 00000000 00:00 0 
+89500000-d6b80000 ---p 00000000 00:00 0 
+d6b80000-d9480000 rw-p 00000000 00:00 0 
+d9480000-100000000 ---p 00000000 00:00 0 
+100000000-1000e0000 rw-p 00000000 00:00 0 
+1000e0000-140000000 ---p 00000000 00:00 0 
+7f81d4000000-7f81d4021000 rw-p 00000000 00:00 0 
+7f81d4021000-7f81d8000000 ---p 00000000 00:00 0 
+7f81dc000000-7f81dc28d000 rw-p 00000000 00:00 0 
+7f81dc28d000-7f81e0000000 ---p 00000000 00:00 0 
+7f81e0000000-7f81e0021000 rw-p 00000000 00:00 0 
+7f81e0021000-7f81e4000000 ---p 00000000 00:00 0 
+7f81e4000000-7f81e4021000 rw-p 00000000 00:00 0 
+7f81e4021000-7f81e8000000 ---p 00000000 00:00 0 
+7f81e8000000-7f81e818b000 rw-p 00000000 00:00 0 
+7f81e818b000-7f81ec000000 ---p 00000000 00:00 0 
+7f81ec000000-7f81ec021000 rw-p 00000000 00:00 0 
+7f81ec021000-7f81f0000000 ---p 00000000 00:00 0 
+7f81f0000000-7f81f0021000 rw-p 00000000 00:00 0 
+7f81f0021000-7f81f4000000 ---p 00000000 00:00 0 
+7f81f4000000-7f81f4021000 rw-p 00000000 00:00 0 
+7f81f4021000-7f81f8000000 ---p 00000000 00:00 0 
+7f81f8000000-7f81f8021000 rw-p 00000000 00:00 0 
+7f81f8021000-7f81fc000000 ---p 00000000 00:00 0 
+7f81fc000000-7f81fc021000 rw-p 00000000 00:00 0 
+7f81fc021000-7f8200000000 ---p 00000000 00:00 0 
+7f8202207000-7f8202284000 r--s 005e3000 08:0a 4456603                    /home/tarang/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.2.12.Final/ea479b6692e22c9b642dd4142db670e92d106544/hibernate-core-5.2.12.Final.jar
+7f8202284000-7f82022b4000 r--s 0024f000 08:0a 4459101                    /home/tarang/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/23.0/c947004bb13d18182be60077ade044099e4f26f1/guava-23.0.jar
+7f82022b4000-7f82022b5000 ---p 00000000 00:00 0 
+7f82022b5000-7f82023b5000 rw-p 00000000 00:00 0 
+7f82023b5000-7f82023b8000 ---p 00000000 00:00 0 
+7f82023b8000-7f82024b6000 rw-p 00000000 00:00 0 
+7f82024b6000-7f82024b9000 ---p 00000000 00:00 0 
+7f82024b9000-7f82025b7000 rw-p 00000000 00:00 0 
+7f82025b7000-7f82025ba000 ---p 00000000 00:00 0 
+7f82025ba000-7f82026b8000 rw-p 00000000 00:00 0 
+7f82026b8000-7f82026bb000 ---p 00000000 00:00 0 
+7f82026bb000-7f82027b9000 rw-p 00000000 00:00 0 
+7f82027b9000-7f8202a95000 r--p 00000000 08:0a 4588911                    /usr/lib/locale/locale-archive
+7f8202a95000-7f8202a98000 ---p 00000000 00:00 0 
+7f8202a98000-7f8202b96000 rw-p 00000000 00:00 0 
+7f8202b96000-7f8202b99000 ---p 00000000 00:00 0 
+7f8202b99000-7f8202c97000 rw-p 00000000 00:00 0 
+7f8202c97000-7f8202c98000 ---p 00000000 00:00 0 
+7f8202c98000-7f8203710000 rw-p 00000000 00:00 0 
+7f8203710000-7f82038e0000 r--s 03c55000 08:0a 9442271                    /home/tarang/.sdkman/candidates/java/8u152-zulu/jre/lib/rt.jar
+7f82038e0000-7f8203ee0000 rw-p 00000000 00:00 0 
+7f8203ee0000-7f82040e0000 ---p 00000000 00:00 0 
+7f82040e0000-7f82082af000 rw-p 00000000 00:00 0 
+7f82082af000-7f82082b0000 ---p 00000000 00:00 0 
+7f82082b0000-7f82083da000 rw-p 00000000 00:00 0 
+7f82083da000-7f8208645000 ---p 00000000 00:00 0 
+7f8208645000-7f820866f000 rw-p 00000000 00:00 0 
+7f820866f000-7f82088d9000 ---p 00000000 00:00 0 
+7f82088d9000-7f82088ef000 rw-p 00000000 00:00 0 
+7f82088ef000-7f8208a24000 ---p 00000000 00:00 0 
+7f8208a24000-7f8208a2f000 rw-p 00000000 00:00 0 
+7f8208a2f000-7f8208de5000 ---p 00000000 00:00 0 
+7f8208de5000-7f8209055000 rwxp 00000000 00:00 0 
+7f8209055000-7f8217de5000 ---p 00000000 00:00 0 
+7f8217de5000-7f8217e00000 r-xp 00000000 08:0a 9442209                    /home/tarang/.sdkman/candidates/java/8u152-zulu/jre/lib/amd64/libzip.so
+7f8217e00000-7f8217fff000 ---p 0001b000 08:0a 9442209                    /home/tarang/.sdkman/candidates/java/8u152-zulu/jre/lib/amd64/libzip.so
+7f8217fff000-7f8218000000 rw-p 0001a000 08:0a 9442209                    /home/tarang/.sdkman/candidates/java/8u152-zulu/jre/lib/amd64/libzip.so
+7f8218000000-7f8218563000 rw-p 00000000 00:00 0 
+7f8218563000-7f821c000000 ---p 00000000 00:00 0 
+7f821c003000-7f821c008000 r--s 00048000 08:0a 4460154                    /home/tarang/.gradle/caches/modules-2/files-2.1/dom4j/dom4j/1.6.1/5d3ccc056b6f056dbf0dddfdf43894b9065a8f94/dom4j-1.6.1.jar
+7f821c008000-7f821c00b000 r--s 0002b000 08:0a 4456605                    /home/tarang/.gradle/caches/modules-2/files-2.1/org.jboss/jandex/2.0.3.Final/bfc4d6257dbff7a33a357f0de116be6ff951d849/jandex-2.0.3.Final.jar
+7f821c00b000-7f821c015000 r--s 000ae000 08:0a 4461128                    /home/tarang/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.20.0-GA/a9cbcdfb7e9f86fbc74d3afae65f2248bfbf82a0/javassist-3.20.0-GA.jar
+7f821c015000-7f821c0ac000 rw-p 00000000 00:00 0 
+7f821c0ac000-7f821c0ad000 ---p 00000000 00:00 0 
+7f821c0ad000-7f821c1ad000 rw-p 00000000 00:00 0 
+7f821c1ad000-7f821c1b8000 r-xp 00000000 08:0a 1835312                    /lib/x86_64-linux-gnu/libnss_files-2.26.so
+7f821c1b8000-7f821c3b7000 ---p 0000b000 08:0a 1835312                    /lib/x86_64-linux-gnu/libnss_files-2.26.so
+7f821c3b7000-7f821c3b8000 r--p 0000a000 08:0a 1835312                    /lib/x86_64-linux-gnu/libnss_files-2.26.so
+7f821c3b8000-7f821c3b9000 rw-p 0000b000 08:0a 1835312                    /lib/x86_64-linux-gnu/libnss_files-2.26.so
+7f821c3b9000-7f821c3bf000 rw-p 00000000 00:00 0 
+7f821c3bf000-7f821c3ca000 r-xp 00000000 08:0a 1835316                    /lib/x86_64-linux-gnu/libnss_nis-2.26.so
+7f821c3ca000-7f821c5c9000 ---p 0000b000 08:0a 1835316                    /lib/x86_64-linux-gnu/libnss_nis-2.26.so
+7f821c5c9000-7f821c5ca000 r--p 0000a000 08:0a 1835316                    /lib/x86_64-linux-gnu/libnss_nis-2.26.so
+7f821c5ca000-7f821c5cb000 rw-p 0000b000 08:0a 1835316                    /lib/x86_64-linux-gnu/libnss_nis-2.26.so
+7f821c5cb000-7f821c5e2000 r-xp 00000000 08:0a 1835306                    /lib/x86_64-linux-gnu/libnsl-2.26.so
+7f821c5e2000-7f821c7e1000 ---p 00017000 08:0a 1835306                    /lib/x86_64-linux-gnu/libnsl-2.26.so
+7f821c7e1000-7f821c7e2000 r--p 00016000 08:0a 1835306                    /lib/x86_64-linux-gnu/libnsl-2.26.so
+7f821c7e2000-7f821c7e3000 rw-p 00017000 08:0a 1835306                    /lib/x86_64-linux-gnu/libnsl-2.26.so
+7f821c7e3000-7f821c7e5000 rw-p 00000000 00:00 0 
+7f821c7e5000-7f821c7ed000 r-xp 00000000 08:0a 1835308                    /lib/x86_64-linux-gnu/libnss_compat-2.26.so
+7f821c7ed000-7f821c9ec000 ---p 00008000 08:0a 1835308                    /lib/x86_64-linux-gnu/libnss_compat-2.26.so
+7f821c9ec000-7f821c9ed000 r--p 00007000 08:0a 1835308                    /lib/x86_64-linux-gnu/libnss_compat-2.26.so
+7f821c9ed000-7f821c9ee000 rw-p 00008000 08:0a 1835308                    /lib/x86_64-linux-gnu/libnss_compat-2.26.so
+7f821c9ee000-7f821ca18000 r-xp 00000000 08:0a 9442194                    /home/tarang/.sdkman/candidates/java/8u152-zulu/jre/lib/amd64/libjava.so
+7f821ca18000-7f821cc18000 ---p 0002a000 08:0a 9442194                    /home/tarang/.sdkman/candidates/java/8u152-zulu/jre/lib/amd64/libjava.so
+7f821cc18000-7f821cc1a000 rw-p 0002a000 08:0a 9442194                    /home/tarang/.sdkman/candidates/java/8u152-zulu/jre/lib/amd64/libjava.so
+7f821cc1a000-7f821cc27000 r-xp 00000000 08:0a 9442214                    /home/tarang/.sdkman/candidates/java/8u152-zulu/jre/lib/amd64/libverify.so
+7f821cc27000-7f821ce27000 ---p 0000d000 08:0a 9442214                    /home/tarang/.sdkman/candidates/java/8u152-zulu/jre/lib/amd64/libverify.so
+7f821ce27000-7f821ce29000 rw-p 0000d000 08:0a 9442214                    /home/tarang/.sdkman/candidates/java/8u152-zulu/jre/lib/amd64/libverify.so
+7f821ce29000-7f821ce30000 r-xp 00000000 08:0a 1835325                    /lib/x86_64-linux-gnu/librt-2.26.so
+7f821ce30000-7f821d02f000 ---p 00007000 08:0a 1835325                    /lib/x86_64-linux-gnu/librt-2.26.so
+7f821d02f000-7f821d030000 r--p 00006000 08:0a 1835325                    /lib/x86_64-linux-gnu/librt-2.26.so
+7f821d030000-7f821d031000 rw-p 00007000 08:0a 1835325                    /lib/x86_64-linux-gnu/librt-2.26.so
+7f821d031000-7f821d186000 r-xp 00000000 08:0a 1835300                    /lib/x86_64-linux-gnu/libm-2.26.so
+7f821d186000-7f821d385000 ---p 00155000 08:0a 1835300                    /lib/x86_64-linux-gnu/libm-2.26.so
+7f821d385000-7f821d386000 r--p 00154000 08:0a 1835300                    /lib/x86_64-linux-gnu/libm-2.26.so
+7f821d386000-7f821d387000 rw-p 00155000 08:0a 1835300                    /lib/x86_64-linux-gnu/libm-2.26.so
+7f821d387000-7f821dfce000 r-xp 00000000 08:0a 9442183                    /home/tarang/.sdkman/candidates/java/8u152-zulu/jre/lib/amd64/server/libjvm.so
+7f821dfce000-7f821e1cd000 ---p 00c47000 08:0a 9442183                    /home/tarang/.sdkman/candidates/java/8u152-zulu/jre/lib/amd64/server/libjvm.so
+7f821e1cd000-7f821e29d000 rw-p 00c46000 08:0a 9442183                    /home/tarang/.sdkman/candidates/java/8u152-zulu/jre/lib/amd64/server/libjvm.so
+7f821e29d000-7f821e2df000 rw-p 00000000 00:00 0 
+7f821e2df000-7f821e4b5000 r-xp 00000000 08:0a 1835292                    /lib/x86_64-linux-gnu/libc-2.26.so
+7f821e4b5000-7f821e6b5000 ---p 001d6000 08:0a 1835292                    /lib/x86_64-linux-gnu/libc-2.26.so
+7f821e6b5000-7f821e6b9000 r--p 001d6000 08:0a 1835292                    /lib/x86_64-linux-gnu/libc-2.26.so
+7f821e6b9000-7f821e6bb000 rw-p 001da000 08:0a 1835292                    /lib/x86_64-linux-gnu/libc-2.26.so
+7f821e6bb000-7f821e6bf000 rw-p 00000000 00:00 0 
+7f821e6bf000-7f821e6c2000 r-xp 00000000 08:0a 1835298                    /lib/x86_64-linux-gnu/libdl-2.26.so
+7f821e6c2000-7f821e8c1000 ---p 00003000 08:0a 1835298                    /lib/x86_64-linux-gnu/libdl-2.26.so
+7f821e8c1000-7f821e8c2000 r--p 00002000 08:0a 1835298                    /lib/x86_64-linux-gnu/libdl-2.26.so
+7f821e8c2000-7f821e8c3000 rw-p 00003000 08:0a 1835298                    /lib/x86_64-linux-gnu/libdl-2.26.so
+7f821e8c3000-7f821e8d8000 r-xp 00000000 08:0a 9442152                    /home/tarang/.sdkman/candidates/java/8u152-zulu/lib/amd64/jli/libjli.so
+7f821e8d8000-7f821ead8000 ---p 00015000 08:0a 9442152                    /home/tarang/.sdkman/candidates/java/8u152-zulu/lib/amd64/jli/libjli.so
+7f821ead8000-7f821ead9000 rw-p 00015000 08:0a 9442152                    /home/tarang/.sdkman/candidates/java/8u152-zulu/lib/amd64/jli/libjli.so
+7f821ead9000-7f821eaf3000 r-xp 00000000 08:0a 1835322                    /lib/x86_64-linux-gnu/libpthread-2.26.so
+7f821eaf3000-7f821ecf2000 ---p 0001a000 08:0a 1835322                    /lib/x86_64-linux-gnu/libpthread-2.26.so
+7f821ecf2000-7f821ecf3000 r--p 00019000 08:0a 1835322                    /lib/x86_64-linux-gnu/libpthread-2.26.so
+7f821ecf3000-7f821ecf4000 rw-p 0001a000 08:0a 1835322                    /lib/x86_64-linux-gnu/libpthread-2.26.so
+7f821ecf4000-7f821ecf8000 rw-p 00000000 00:00 0 
+7f821ecf8000-7f821ed1f000 r-xp 00000000 08:0a 1835284                    /lib/x86_64-linux-gnu/ld-2.26.so
+7f821ed1f000-7f821ed21000 r--s 0000e000 08:0a 4459075                    /home/tarang/.gradle/caches/modules-2/files-2.1/com.fasterxml/classmate/1.3.0/183407ff982e9375f1a1c4a51ed0a9307c598fc7/classmate-1.3.0.jar
+7f821ed21000-7f821ed22000 r--s 00006000 08:0a 4456604                    /home/tarang/.gradle/caches/modules-2/files-2.1/org.jboss.spec.javax.transaction/jboss-transaction-api_1.2_spec/1.0.1.Final/4441f144a2a1f46ed48fcc6b476a4b6295e6d524/jboss-transaction-api_1.2_spec-1.0.1.Final.jar
+7f821ed22000-7f821ed27000 r--s 00068000 08:0a 4460153                    /home/tarang/.gradle/caches/modules-2/files-2.1/antlr/antlr/2.7.7/83cd2cd674a217ade95a4bb83a8a14f351f48bd0/antlr-2.7.7.jar
+7f821ed27000-7f821ed2c000 r--s 00017000 08:0a 4459945                    /home/tarang/.gradle/caches/modules-2/files-2.1/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/1.0.0.Final/5e731d961297e5a07290bfaf3db1fbc8bbbf405a/hibernate-jpa-2.1-api-1.0.0.Final.jar
+7f821ed2c000-7f821ed2f000 r--s 00010000 08:0a 4460168                    /home/tarang/.gradle/caches/modules-2/files-2.1/org.hibernate.common/hibernate-commons-annotations/5.0.1.Final/71e1cff3fcb20d3b3af4f3363c3ddb24d33c6879/hibernate-commons-annotations-5.0.1.Final.jar
+7f821ed2f000-7f821edfa000 rw-p 00000000 00:00 0 
+7f821edfa000-7f821edfd000 ---p 00000000 00:00 0 
+7f821edfd000-7f821eefd000 rw-p 00000000 00:00 0 
+7f821eefd000-7f821eeff000 r--s 0000f000 08:0a 4459612                    /home/tarang/.gradle/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.3.0.Final/3616bb87707910296e2c195dc016287080bba5af/jboss-logging-3.3.0.Final.jar
+7f821eeff000-7f821ef00000 r--s 00000000 08:0a 4459432                    /home/tarang/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.14/775b7e22fb10026eed3f86e8dc556dfafe35f2d5/animal-sniffer-annotations-1.14.jar
+7f821ef00000-7f821ef02000 r--s 00001000 08:0a 4459431                    /home/tarang/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.1/ed28ded51a8b1c6b112568def5f4b455e6809019/j2objc-annotations-1.1.jar
+7f821ef02000-7f821ef03000 r--s 00002000 08:0a 4461847                    /home/tarang/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.0.18/5f65affce1684999e2f4024983835efc3504012e/error_prone_annotations-2.0.18.jar
+7f821ef03000-7f821ef06000 r--s 00006000 08:0a 4459428                    /home/tarang/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/1.3.9/40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf/jsr305-1.3.9.jar
+7f821ef06000-7f821ef0b000 r--s 00034000 08:0a 4459467                    /home/tarang/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.2/3edcfe49d2c6053a70a2a47e4e1c2f94998a49cf/gson-2.8.2.jar
+7f821ef0b000-7f821ef12000 r--s 000a5000 08:0a 4459079                    /home/tarang/.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/5.1.6/380ef5226de2c85ff3b38cbfefeea881c5fce09d/mysql-connector-java-5.1.6.jar
+7f821ef12000-7f821ef13000 r--s 00001000 08:0a 2761797                    /home/tarang/Desktop/SpringProject/multiProject/Hibernate/build/libs/Hibernate-1.0.jar
+7f821ef13000-7f821ef1b000 rw-s 00000000 08:0a 4468958                    /tmp/hsperfdata_tarang/3892
+7f821ef1b000-7f821ef1c000 rw-p 00000000 00:00 0 
+7f821ef1c000-7f821ef1d000 r--p 00000000 00:00 0 
+7f821ef1d000-7f821ef1f000 rw-p 00000000 00:00 0 
+7f821ef1f000-7f821ef20000 r--p 00027000 08:0a 1835284                    /lib/x86_64-linux-gnu/ld-2.26.so
+7f821ef20000-7f821ef21000 rw-p 00028000 08:0a 1835284                    /lib/x86_64-linux-gnu/ld-2.26.so
+7f821ef21000-7f821ef22000 rw-p 00000000 00:00 0 
+7fff0e06c000-7fff0e08e000 rw-p 00000000 00:00 0                          [stack]
+7fff0e161000-7fff0e164000 r--p 00000000 00:00 0                          [vvar]
+7fff0e164000-7fff0e166000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 -Duser.country=IN -Duser.language=en -Duser.variant 
+java_command: MainApp.MainApp
+java_class_path (initial): /home/tarang/Desktop/SpringProject/multiProject/MainApp/build/classes/java/main:/home/tarang/Desktop/SpringProject/multiProject/MainApp/build/resources/main:/home/tarang/Desktop/SpringProject/multiProject/Hibernate/build/libs/Hibernate-1.0.jar:/home/tarang/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/23.0/c947004bb13d18182be60077ade044099e4f26f1/guava-23.0.jar:/home/tarang/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.2.12.Final/ea479b6692e22c9b642dd4142db670e92d106544/hibernate-core-5.2.12.Final.jar:/home/tarang/.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/5.1.6/380ef5226de2c85ff3b38cbfefeea881c5fce09d/mysql-connector-java-5.1.6.jar:/home/tarang/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.2/3edcfe49d2c6053a70a2a47e4e1c2f94998a49cf/gson-2.8.2.jar:/home/tarang/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/1.3.9/40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf/jsr305-1.3.9.jar:/home/tarang/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.0.18/5f65affce1684999e2f4024983835efc3504012e/error_prone_annotations-2.0.18.jar:/home/tarang/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.1/ed28ded51a8b1c6b112568def5f4b455e6809019/j2objc-annotations-1.1.jar:/home/tarang/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.14/775b7e22fb10026eed3f86e8dc556dfafe35f2d5/animal-sniffer-annotations-1.14.jar:/home/tarang/.gradle/caches/modules-2/files-2.1/org.hibernate.common/hibernate-commons-annotations/5.0.1.Final/71e1cff3fcb20d3b3af4f3363c3ddb24d33c6879/hibernate-commons-annotations-5.0.1.Final.jar:/home/tarang/.gradle/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.3.0.Final/3616bb87707910296e2c195dc016287080bba5af/jboss-logging-3.3.0.Final.jar:/home/tarang/.gradle/caches/modules-2/files-2.1/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/1.0.0.Final/5e731d961297e5a
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/home/tarang/.sdkman/candidates/java/current
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+USERNAME=tarang
+LD_LIBRARY_PATH=/home/tarang/.sdkman/candidates/java/current/jre/lib/amd64:/home/tarang/.sdkman/candidates/java/current/jre/lib/i386:
+SHELL=/usr/bin/zsh
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xa3c720], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xa3c720], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x8a65b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x8a65b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x8a65b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x8a65b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x8a7c90], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x8a9380], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: SIG_IGN, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGTERM: [libjvm.so+0x8a9380], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x8a9380], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=17.10
+DISTRIB_CODENAME=artful
+DISTRIB_DESCRIPTION="Ubuntu 17.10"
+
+uname:Linux 4.14.1-041401-generic #201711210430 SMP Tue Nov 21 09:32:36 UTC 2017 x86_64
+libc:glibc 2.26 NPTL 2.26 
+rlimit: STACK 8192k, CORE 0k, NPROC 31478, NOFILE 1048576, AS infinity
+load average:1.47 1.70 1.44
+
+/proc/meminfo:
+MemTotal:        8113428 kB
+MemFree:         2754832 kB
+MemAvailable:    4293984 kB
+Buffers:          175184 kB
+Cached:          1826336 kB
+SwapCached:            0 kB
+Active:          3669656 kB
+Inactive:        1284252 kB
+Active(anon):    2867240 kB
+Inactive(anon):   405004 kB
+Active(file):     802416 kB
+Inactive(file):   879248 kB
+Unevictable:       35440 kB
+Mlocked:           35440 kB
+SwapTotal:       3998716 kB
+SwapFree:        3998716 kB
+Dirty:               516 kB
+Writeback:             0 kB
+AnonPages:       2987884 kB
+Mapped:           484772 kB
+Shmem:            408108 kB
+Slab:             235928 kB
+SReclaimable:     156720 kB
+SUnreclaim:        79208 kB
+KernelStack:       14880 kB
+PageTables:        65544 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     8055428 kB
+Committed_AS:   10153044 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      194816 kB
+DirectMap2M:     8136704 kB
+
+
+CPU:total 2 (initial active 2) (2 cores per cpu, 1 threads per core) family 6 model 42 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, clmul, tsc, tscinvbit
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 42
+model name	: Intel(R) Celeron(R) CPU B800 @ 1.50GHz
+stepping	: 7
+microcode	: 0x29
+cpu MHz		: 1496.675
+cache size	: 2048 KB
+physical id	: 0
+siblings	: 2
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave lahf_lm epb tpr_shadow vnmi flexpriority ept vpid xsaveopt dtherm arat pln pts
+bugs		:
+bogomips	: 2993.35
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 42
+model name	: Intel(R) Celeron(R) CPU B800 @ 1.50GHz
+stepping	: 7
+microcode	: 0x29
+cpu MHz		: 1496.675
+cache size	: 2048 KB
+physical id	: 0
+siblings	: 2
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave lahf_lm epb tpr_shadow vnmi flexpriority ept vpid xsaveopt dtherm arat pln pts
+bugs		:
+bogomips	: 2993.35
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 8113428k(2754832k free), swap 3998716k(3998716k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.152-b16) for linux-amd64 JRE (1.8.0_152-b16), built on Oct 18 2017 08:36:07 by "zulu_re" with gcc 4.4.7 20120313 (Red Hat 4.4.7-3)
+
+time: Sat Feb 17 12:48:33 2018
+elapsed time: 1 seconds (0d 0h 0m 1s)
+
