@@ -14,8 +14,11 @@ include 'shared'
 include 'api'
 include 'services:webservice'
 */
-include 'WebClient'
+
 include 'Hibernate'
 include 'MainApp'
+include 'PharmaWebClinetIntellij'
 
 rootProject.name = 'PharmaErpApplication'
+rootProject.name = 'Pharma'
+

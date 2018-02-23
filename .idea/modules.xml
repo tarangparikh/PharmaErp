@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Hibernate/Hibernate.iml" filepath="$PROJECT_DIR$/.idea/modules/Hibernate/Hibernate.iml" group="Hibernate" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Hibernate/Hibernate_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Hibernate/Hibernate_main.iml" group="Hibernate" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Hibernate/Hibernate_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Hibernate/Hibernate_test.iml" group="Hibernate" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MainApp/MainApp.iml" filepath="$PROJECT_DIR$/.idea/modules/MainApp/MainApp.iml" group="MainApp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MainApp/MainApp_main.iml" filepath="$PROJECT_DIR$/.idea/modules/MainApp/MainApp_main.iml" group="MainApp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MainApp/MainApp_test.iml" filepath="$PROJECT_DIR$/.idea/modules/MainApp/MainApp_test.iml" group="MainApp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Pharma.iml" filepath="$PROJECT_DIR$/.idea/modules/Pharma.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PharmaWebClinetIntellij/PharmaWebClinetIntellij.iml" filepath="$PROJECT_DIR$/.idea/modules/PharmaWebClinetIntellij/PharmaWebClinetIntellij.iml" group="PharmaWebClinetIntellij" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PharmaWebClinetIntellij/PharmaWebClinetIntellij_main.iml" filepath="$PROJECT_DIR$/.idea/modules/PharmaWebClinetIntellij/PharmaWebClinetIntellij_main.iml" group="PharmaWebClinetIntellij" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PharmaWebClinetIntellij/PharmaWebClinetIntellij_test.iml" filepath="$PROJECT_DIR$/.idea/modules/PharmaWebClinetIntellij/PharmaWebClinetIntellij_test.iml" group="PharmaWebClinetIntellij" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Pharma_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Pharma_main.iml" group="Pharma" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Pharma_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Pharma_test.iml" group="Pharma" />
+    </modules>
+  </component>
+</project>

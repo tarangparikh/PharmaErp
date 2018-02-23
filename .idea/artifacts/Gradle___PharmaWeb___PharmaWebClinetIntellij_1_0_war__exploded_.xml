@@ -1,0 +1,45 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Gradle : PharmaWeb : PharmaWebClinetIntellij-1.0.war (exploded)">
+    <output-path>$PROJECT_DIR$/PharmaWebClinetIntellij/build/libs/exploded/PharmaWebClinetIntellij-1.0.war</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$">
+        <manifest>TWFuaWZlc3QtVmVyc2lvbjogMS4wDQoNCg==</manifest>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/PharmaWebClinetIntellij/build/libs/exploded/PharmaWebClinetIntellij-1.0.war/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="PharmaWebClinetIntellij_main/web/Web Gradle : PharmaWebClinetIntellij-1.0.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="PharmaWebClinetIntellij_main" />
+          <element id="dir-copy" path="$PROJECT_DIR$/PharmaWebClinetIntellij/out/production/resources" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="Pharma-Hibernate-1.0.jar">
+            <element id="module-output" name="Hibernate_main" />
+            <element id="dir-copy" path="$PROJECT_DIR$/Hibernate/out/production/resources" />
+          </element>
+          <element id="library" level="project" name="Gradle: com.google.guava:guava:23.0" />
+          <element id="library" level="project" name="Gradle: org.hibernate:hibernate-core:5.2.12.Final" />
+          <element id="library" level="project" name="Gradle: mysql:mysql-connector-java:5.1.6" />
+          <element id="library" level="project" name="Gradle: com.google.code.gson:gson:2.8.2" />
+          <element id="library" level="project" name="Gradle: com.google.code.findbugs:jsr305:1.3.9" />
+          <element id="library" level="project" name="Gradle: com.google.errorprone:error_prone_annotations:2.0.18" />
+          <element id="library" level="project" name="Gradle: com.google.j2objc:j2objc-annotations:1.1" />
+          <element id="library" level="project" name="Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.14" />
+          <element id="library" level="project" name="Gradle: org.hibernate.common:hibernate-commons-annotations:5.0.1.Final" />
+          <element id="library" level="project" name="Gradle: org.jboss.logging:jboss-logging:3.3.0.Final" />
+          <element id="library" level="project" name="Gradle: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" />
+          <element id="library" level="project" name="Gradle: org.javassist:javassist:3.20.0-GA" />
+          <element id="library" level="project" name="Gradle: antlr:antlr:2.7.7" />
+          <element id="library" level="project" name="Gradle: org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:1.0.1.Final" />
+          <element id="library" level="project" name="Gradle: org.jboss:jandex:2.0.3.Final" />
+          <element id="library" level="project" name="Gradle: com.fasterxml:classmate:1.3.0" />
+          <element id="library" level="project" name="Gradle: dom4j:dom4j:1.6.1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

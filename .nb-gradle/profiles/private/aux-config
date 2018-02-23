@@ -4,13 +4,12 @@
   <auxiliary>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-      <group>
-        <file>file:/home/tarang/Desktop/SpringProject/multiProject/settings.gradle</file>
-      </group>
-    </open-files>
-    <editor-bookmarks lastBookmarkId="0" xmlns="http://www.netbeans.org/ns/editor-bookmarks/2"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
       <group/>
+    </open-files>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+      <group>
+        <file>file:/home/tarang/Desktop/SpringProject/Pharma/WebClient/src/main/webapp/META-INF/context.xml</file>
+      </group>
     </open-files>
   </auxiliary>
 </gradle-project-properties>

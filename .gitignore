@@ -4,3 +4,9 @@ MainApp/build/
 Hibernate/build/
 
 WebClient/build/
+/build/
+Hibernate/out/
+
+PharmaWebClinetIntellij/build/
+
+PharmaWebClinetIntellij/out/

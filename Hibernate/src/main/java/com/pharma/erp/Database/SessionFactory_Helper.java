@@ -12,9 +12,10 @@ import org.hibernate.cfg.Configuration;
  *
  * @author tarang
  */
+
 public class SessionFactory_Helper {
-    
-    public static SessionFactory getSessionFactory(Class _class,String _path_configuration){
+    public enum Type{MAIN,WEB};
+    public static SessionFactory getSessionFactory(Class _class,String _path_configuration,Type _type){
         SessionFactory _factory;
         if(_path_configuration!=null)
         {
@@ -22,11 +23,16 @@ public class SessionFactory_Helper {
                         .configure(_path_configuration)
                         .addAnnotatedClass(_class)
                         .buildSessionFactory();
-        }else{
+        }else if(_type==Type.MAIN){
             _factory = new Configuration()
                         .configure()
                         .addAnnotatedClass(_class)
                         .buildSessionFactory();
+        }else{
+            _factory = new Configuration()
+                    .configure()
+                    .addAnnotatedClass(_class)
+                    .buildSessionFactory();
         }
         return _factory;
     

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="Hibernate_main" target="1.8" />
+      <module name="Hibernate_test" target="1.8" />
+      <module name="MainApp_main" target="1.8" />
+      <module name="MainApp_test" target="1.8" />
+      <module name="Pharma_main" target="1.8" />
+      <module name="Pharma_test" target="1.8" />
+      <module name="PharmaWebClinetIntellij_main" target="1.8" />
+      <module name="PharmaWebClinetIntellij_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
