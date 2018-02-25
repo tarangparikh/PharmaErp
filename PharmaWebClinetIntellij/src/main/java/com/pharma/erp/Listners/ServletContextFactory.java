@@ -1,6 +1,7 @@
 package com.pharma.erp.Listners;
 
 import com.pharma.erp.Database.SessionFactory_Helper;
+import com.pharma.erp.StoredObject.Serialized;
 import com.schema.User;
 
 import javax.servlet.ServletContext;
@@ -11,6 +12,8 @@ import javax.servlet.http.HttpSessionAttributeListener;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 import javax.servlet.http.HttpSessionBindingEvent;
+import java.io.IOException;
+import java.security.KeyPair;
 
 @WebListener()
 public class ServletContextFactory implements ServletContextListener,
@@ -32,6 +35,14 @@ public class ServletContextFactory implements ServletContextListener,
         ServletContext servletContext = sce.getServletContext();
         synchronized (servletContext){
             servletContext.setAttribute("User_Factory", SessionFactory_Helper.getSessionFactory(User.class,null , SessionFactory_Helper.Type.MAIN));
+            servletContext.setAttribute("Servlet_Context",servletContext);
+            try {
+                servletContext.setAttribute("Key_Pair", Serialized.deserilaize(servletContext.getResourceAsStream("/WEB-INF/StoredObject/system.key")));
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
         }
 
 

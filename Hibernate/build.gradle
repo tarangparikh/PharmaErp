@@ -51,23 +51,28 @@ repositories {
 }
 
 dependencies {
-    // This dependency is found on compile classpath of this component and consumers.
-    compile 'com.google.guava:guava:23.0'
+        // This dependency is found on compile classpath of this component and consumers.
+        compile 'com.google.guava:guava:23.0'
 	
 	// https://mvnrepository.com/artifact/org.hibernate/hibernate-core
 	compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.12.Final'
 
+    // https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt
+    compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.2'
 
 
-	// https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
 	compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
 	
 	// https://mvnrepository.com/artifact/com.google.code.gson/gson
 	compile group: 'com.google.code.gson', name: 'gson', version: '2.8.2'
 
+        // https://mvnrepository.com/artifact/org.hibernate/hibernate-validator
+        compile group: 'org.hibernate', name: 'hibernate-validator', version: '5.4.1.Final'
 
-    // Use JUnit test framework
-    testCompile 'junit:junit:4.12'
+
+        // Use JUnit test framework
+        testCompile 'junit:junit:4.12'
 }
 
 // Define the main class for the application

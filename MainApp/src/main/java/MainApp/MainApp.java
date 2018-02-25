@@ -9,6 +9,8 @@ package MainApp;
 import com.schema.User;
 import org.hibernate.SessionFactory;
 import com.pharma.erp.Database.SessionFactory_Helper;
+import com.pharma.erp.Validation.Data;
+import com.pharma.erp.Validation.UserValidation;
 import com.schema.Student;
 import org.hibernate.Session;
 import org.hibernate.cfg.Configuration;
@@ -23,13 +25,12 @@ import java.util.List;
  */
 public class MainApp {
     public static void main(String[] args){
-        System.out.println("Sone");
-        SessionFactory _factory = SessionFactory_Helper.getSessionFactory(User.class, null, SessionFactory_Helper.Type.MAIN);
-        Session _session = _factory.getCurrentSession();
+        SessionFactory _user_factory = SessionFactory_Helper.getSessionFactory(User.class,null, SessionFactory_Helper.Type.MAIN);
+        Session _session = _user_factory.getCurrentSession();
+        User user = new User("tarang","parisdkh");
         _session.beginTransaction();
+        UserValidation userValidation = new UserValidation(new Data<User>(_user_factory,User.class),_session);
+        System.out.println(userValidation.isPresent(user));
 
-        _session.save(new User("Jums","Baggi"));
-        _session.getTransaction().commit();
-        _factory.close();
     }
 }

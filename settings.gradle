@@ -19,6 +19,6 @@ include 'Hibernate'
 include 'MainApp'
 include 'PharmaWebClinetIntellij'
 
-rootProject.name = 'PharmaErpApplication'
+
 rootProject.name = 'Pharma'
 

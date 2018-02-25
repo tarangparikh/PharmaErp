@@ -52,7 +52,7 @@
                         </div>
                     </div>
                     <div class="card-body" id="login_body">
-                        <form id="login_form" action="/login">
+                        <form id="login_form" action="${pageContext.request.contextPath}/login" method="post">
                             <div class="form-group">
                                 <label for="email">Email:</label>
                                 <div class="input-group mb-3">
@@ -60,7 +60,7 @@
                                         <span class="input-group-text" id="basic-addon1">@</span>
                                     </div>
 
-                                    <input type="text" id="email" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"
+                                    <input type="text" id="email" name="email" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"
                                            data-trigger="manual" />
 
                                 </div>
@@ -73,7 +73,7 @@
                                         <span class="input-group-text" id="basic-addon2">&#128274</span>
                                     </div>
 
-                                    <input type="password" class="form-control" id="pwd" placeholder="Password">
+                                    <input type="password" class="form-control" id="pwd" name="password" placeholder="Password">
                                 </div>
                             </div>
                             <div class="form-check">
